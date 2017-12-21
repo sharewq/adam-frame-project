@@ -1,0 +1,51 @@
+server:
+  port: 80
+  tomcat.min-spare-threads: 150
+  spring:
+    redis:
+      host: 100.98.100.242
+      port: 6379
+      password:
+      database: 0
+security:
+  oauth2.client.client-id: OAUTH2_CLIENT_PROD
+  oauth2.client.client-secret: ADMIN_PROD
+datasource:
+  enableSlave:
+  type: com.alibaba.druid.pool.DruidDataSource
+  master:
+    url: jdbc:mysql://172.27.0.12:3306/whz?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&useSSL=false
+    username: whz
+    password: SU3sU9J33f/LGtp5LtWQ6ohI0LKHqqUqlTxo1IFwqGaizpw7IWwuNHYwy2LfClOabZEyWkqwtPYteuExvkD1Ug==
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    maxActive: 15
+    initialSize: 5
+    minIdle: 6
+    maxWait: 45000
+    timeBetweenEvictionRunsMillis: 45000
+    minEvictableIdleTimeMillis: 30000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    validationQuery: select 'x'
+    poolPreparedStatements: true
+    connectionProperties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK3Qm2rrJg/3HLMk93R1skEu5g2T3ghgimkPzUCrg1So6rFJivMtzFnEUMuNrrTx8HveHI/T1UG+GnzPfmtMyv8CAwEAAQ==
+  slave1:
+    url: jdbc:mysql://mysql:3306/rkw_prod?useUnicode=true&serverTimezone=Asia/Shanghai&characterEncoding=UTF-8&useSSL=false
+    username: rkwtest
+    password: aKN59VLlIJ2yiZV4yTN4aDTrQyiUdrt8DkRxc7sCt/4jklQXyhM2PTA2Qktr/VIsbliVeO/CvYwFmNGqYl1G5w==
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    maxActive: 15
+    initialSize: 5
+    minIdle: 6
+    maxWait: 45000
+    timeBetweenEvictionRunsMillis: 45000
+    minEvictableIdleTimeMillis: 30000
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    validationQuery: select 'x'
+    poolPreparedStatements: true
+    connectionProperties: config.decrypt=true;config.decrypt.key=MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAK3Qm2rrJg/3HLMk93R1skEu5g2T3ghgimkPzUCrg1So6rFJivMtzFnEUMuNrrTx8HveHI/T1UG+GnzPfmtMyv8CAwEAAQ==
