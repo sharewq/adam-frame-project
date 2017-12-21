@@ -16,5 +16,5 @@ public interface UserMapper extends MyMapper<User> {
     @Select("select * from user where name = #{name}")
     User findUserByName(@Param("name") String name);
 
-    public List<User> findUserInfo();
+    List<User> findUserInfo();
 }

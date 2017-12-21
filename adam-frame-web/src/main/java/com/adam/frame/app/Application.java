@@ -20,7 +20,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @Controller
 @EnableWebMvc
 @SpringBootApplication
-@MapperScan(basePackages = "com.adam.frame.jdbc.mapper")
+@MapperScan(basePackages = "com.adam.frame.jdbc.Mapper")
 public class Application extends WebMvcConfigurerAdapter implements CommandLineRunner {
     private Logger logger = LoggerFactory.getLogger(Application.class);
 
